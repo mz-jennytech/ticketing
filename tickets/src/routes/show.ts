@@ -1,6 +1,6 @@
 import express, { Request, Response } from 'express';
 import { Ticket } from '../models/ticket';
-import { NotAuthorizedError } from '@jutickets/common';
+import { NotFoundError } from '@jutickets/common';
 
 const router = express.Router();
 
