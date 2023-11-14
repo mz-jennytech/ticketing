@@ -4,8 +4,6 @@ import jwt from 'jsonwebtoken';
 import { User } from '../models/user';
 import { validationRequest, BadRequestError } from '@jutickets/common';
 
-import { User } from '../models/user';
-
 const router = express.Router();
 
 router.post(
