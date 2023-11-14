@@ -9,16 +9,15 @@ import { User } from '../models/user';
 
 const router = express.Router();
 
-router.post('/api/users/signin',
-[
-  body('email')
-    .isEmail()
-    .withMessage('Email must be valid'),
-  body('password')
-    .trim()
-    .notEmpty()
-    .withMessage('You must supply a password')
-],
+router.post(
+  '/api/users/signin',
+  [
+    body('email').isEmail().withMessage('Email must be valid'),
+    body('password')
+      .trim()
+      .notEmpty()
+      .withMessage('You must supply a password'),
+  ],
   validationRequest,
   async (req: Request, res: Response) => {
     const { email, password } = req.body;

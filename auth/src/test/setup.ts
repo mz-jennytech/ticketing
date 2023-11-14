@@ -27,9 +27,7 @@ beforeEach(async () => {
 });
 
 afterAll(async () => {
-  if (mongo) {
   await mongo.stop();
-}
   await mongoose.connection.close();
 });
 
@@ -41,7 +39,7 @@ global.signin = async () => {
     .post('/api/users/signup')
     .send({
       email,
-      password,
+      password
     })
     .expect(201);
 
