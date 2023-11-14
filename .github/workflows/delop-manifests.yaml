@@ -24,4 +24,4 @@ jobs:
 
       - name: Deploy to GKE
         run: gcloud container clusters get-credentials ticketing-dev --zone=southamerica-east1-a
-      - run: kubectl apply -f infra/k8s
+      - run: kubectl apply -f infra/k8s && kubectl apply -f infra/k8s-prod
