@@ -29,5 +29,5 @@ jobs:
       - name: Deploy to GKE
         run: gcloud container clusters get-credentials ticketing-dev --zone=southamerica-east1-a
       - run: kubectl set image deployment/auth-depl auth=us.gcr.io/ticketing-dev-395902/auth:latest
-      - run: kubectl rollout restart deployment
+      - run: kubectl rollout restart deployment auth-depl
         
