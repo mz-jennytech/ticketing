@@ -25,6 +25,7 @@ jobs:
 
       - name: Configure Docker
         run: gcloud auth configure-docker
+      - run: gcloud auth application-default login
 
       - name: Deploy to GKE
         run: gcloud container clusters get-credentials ticketing-dev --zone=southamerica-east1-a
