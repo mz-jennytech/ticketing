@@ -22,7 +22,10 @@ jobs:
           project_id: ${{ secrets.GCP_PROJECT_ID }}
           service_account_key: ${{ secrets.GCP_SA_KEY }}
 
+      - name: Add gcloud and kubectl to PATH
+        run: echo "export PATH=$PATH:/google-cloud-sdk/bin" >> $GITHUB_ENV
+          source $GITHUB_ENV
+
       - name: Deploy to GKE
         run: gcloud container clusters get-credentials ticketing-dev --zone=southamerica-east1-a
-      - run: kubectl apply -f infra/k8s
-      - run: kubectl apply -f infra/k8s-prod
+      - run: kubectl apply -f infra/k8s && kubectl apply -f infra/k8s-prod
