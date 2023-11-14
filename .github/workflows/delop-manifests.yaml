@@ -23,7 +23,8 @@ jobs:
           service_account_key: ${{ secrets.GCP_SA_KEY }}
 
       - name: Add gcloud and kubectl to PATH
-        run: echo "export PATH=$PATH:/google-cloud-sdk/bin" >> $GITHUB_ENV
+        run: |
+          echo "export PATH=$PATH:/google-cloud-sdk/bin" >> $GITHUB_ENV
           source $GITHUB_ENV
 
       - name: Deploy to GKE
