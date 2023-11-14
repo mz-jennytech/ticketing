@@ -1,0 +1,33 @@
+name: deploy-auth
+
+on:
+  push:
+    branches: 
+      - main
+    paths:
+      - 'auth/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@main
+        with:
+          version: 'latest'
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          export_default_credentials: true
+
+      - name: Configure Docker
+        run: gcloud auth configure-docker
+
+      - name: Deploy to GKE
+        run: gcloud container clusters get-credentials ticketing-dev --zone=southamerica-east1-a
+      - run: kubectl set image deployment/auth-depl auth=us.gcr.io/ticketing-dev-395902/auth:latest
+      - run: kubectl rollout restart deployment auth-depl
+        
