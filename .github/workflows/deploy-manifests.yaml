@@ -22,20 +22,8 @@ jobs:
           service_account_email: ${{ secrets.GCP_SA_EMAIL }}
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           project_id: ticketing-dev-395902
-        
-      - name: Grant storage permission
-        run: |
-          gcloud projects add-iam-policy-binding YOUR_PROJECT_ID \
-            --member="serviceAccount:YOUR_SERVICE_ACCOUNT@YOUR_PROJECT.iam.gserviceaccount.com" \
-            --role="roles/storage.objectCreator"
             
       - name: Deploy via GCS
-        run: |
-          if gsutil -m rm -rf gs://ticketing-dev-395902_cloudbuild/*; then
-            gsutil -m cp -r * gs://ticketing-dev-395902_cloudbuild/
-          else
-            echo "Error removing files from GCS bucket."
-            exit 1
-          fi
+        run: gcloud container clusters get-credentials ticketing-dev --zone=southamerica-east1-a
 
       - run: kubectl apply -f infra/k8s && kubectl apply -f infra/k8s-prod
