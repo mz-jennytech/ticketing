@@ -15,10 +15,10 @@
 ## Ticket Booking Process
 
 1. **Homepage Access:** Upon successful authentication, users are directed to the homepage.
-   ![SignUp for new user](https://github.com/mz-jennytech/tetris-fun-game/assets/56915109/32e29bcc-98e9-42ff-b6da-a36c75cb722a)
+   ![SignUp for new user](https://github.com/mz-jennytech/ticketing/assets/56915109/32e29bcc-98e9-42ff-b6da-a36c75cb722a)
 
    - Postman test
-     ![signup](https://github.com/mz-jennytech/tetris-fun-game/assets/56915109/8e743236-4550-4581-b6ca-55309053766e)
+     ![signup](https://github.com/mz-jennytech/ticketing/assets/56915109/8e743236-4550-4581-b6ca-55309053766e)
 
 2. **Ticket Creation:** Users can create tickets by providing the name and price, with real-time decimal conversion for the price field.
    ![Ticket Created](https://github.com/mz-jennytech/tetris-fun-game/assets/56915109/812923ba-0cfb-417a-93b0-4fcc4a997d79)
