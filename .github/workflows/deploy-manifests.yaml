@@ -6,7 +6,6 @@ on:
       - main
     paths:
       - 'infra/**'
-      - .github/workflows/deploy-manifests.yaml
 
 jobs:
   deploy:
@@ -26,6 +25,11 @@ jobs:
         
       - name: Deploy via GCS
         run: |
-          gsutil -m rm -rf gs://ticketing-dev-395902_cloudbuild/* || echo "$?"
-          gsutil -m cp -r * gs://ticketing-dev-395902_cloudbuild/
+          if gsutil -m rm -rf gs://ticketing-dev-395902_cloudbuild/*; then
+            gsutil -m cp -r * gs://ticketing-dev-395902_cloudbuild/
+          else
+            echo "Error removing files from GCS bucket."
+            exit 1
+          fi
+
       - run: kubectl apply -f infra/k8s && kubectl apply -f infra/k8s-prod
