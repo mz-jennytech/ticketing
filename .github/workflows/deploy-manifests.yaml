@@ -23,6 +23,12 @@ jobs:
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           project_id: ticketing-dev-395902
         
+      - name: Grant storage permission
+        run: |
+          gcloud projects add-iam-policy-binding YOUR_PROJECT_ID \
+            --member="serviceAccount:YOUR_SERVICE_ACCOUNT@YOUR_PROJECT.iam.gserviceaccount.com" \
+            --role="roles/storage.objectCreator"
+            
       - name: Deploy via GCS
         run: |
           if gsutil -m rm -rf gs://ticketing-dev-395902_cloudbuild/*; then
