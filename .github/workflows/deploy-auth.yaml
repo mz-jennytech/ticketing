@@ -26,8 +26,12 @@ jobs:
 
       - name: Configure Docker
         run: gcloud auth configure-docker
-      - run: gcloud auth application-default login
-      - name: Build API
-        run: gcloud builds submit --tag us.gcr.io/ticketing-dev-395902/auth .
-      - name: Deploy API
-        run: gcloud run deploy api --image us.gcr.io/ticketing-dev-395902/auth --platform managed --zone=southamerica-east1-a
+      - name: Authenticate Google Cloud SDK
+        run: gcloud auth activate-service-account --key-file=${{ secrets.GCP_SA_KEY }}
+
+      - name: Deploy to GKE
+        run: |
+          gcloud container clusters get-credentials ticketing-dev --zone=southamerica-east1-a
+      - run: kubectl rollout restart deployment auth-depl
+          
+      
