@@ -122,6 +122,22 @@ GitHub Actions is leveraged for CI/CD processes. This integration automates test
 
 ---
 
+### Project Structure on google slideshow
+
+[Google Slideshow](https://docs.google.com/presentation/d/1OtF0c86TbpiivYM_EDB6rkXope6DKqB_pBLd_TSsh-4/edit?usp=sharing)
+
+## Getting Started
+
+- Clone the repository: **git clone git@github.com:mz-jennytech/ticketing.git**
+- Install dependencies: **npm install**
+- Configure environment variables for authentication and payment integration.
+- Install Google Cloud SDK (gcloud)
+- Run Skaffold to ensure the pods are all running
+- Connect gcloud to your GitHub repository for automated deployment
+- Run the application: npm start
+- Access the application at http://localhost:3000
+  Feel free to explore, contribute, and make the ticketing experience even better!
+
 ## Author
 
 - **Jennifer Udensi** (@mz-jennytech) - [<img src="https://img.shields.io/badge/Portfolio-20d6fe.svg?&style=plastic"/>](https://jenniferudensiportfolio.netlify.app/)
