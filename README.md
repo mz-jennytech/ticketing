@@ -9,23 +9,29 @@
 ## User Authentication
 
 - **Sign Up:** New users can create an account by providing the necessary information.
+- **Sign In:** Existing users can log in securely to access their accounts.
+- **Sign Out:** Users can log out of their accounts to securely end their session.
 
-* Advanced HTML/CSS
-* Developer Tools
-* SCSS
-* Flexbox
-* Responsive Design
-* Accesibility
-* Working with Designers
-* Design Implementation
-* Bootstrap
-* Advanced Javascript
-* Advanced JQuery
-* Cookies & Local Storage
-* ES6
-* TypeScript
-* Webpack
-* Building Portfolio Applications
+## Ticket Booking Process
+
+1. **Homepage Access:** Upon successful authentication, users are directed to the homepage.
+
+- Advanced HTML/CSS
+- Developer Tools
+- SCSS
+- Flexbox
+- Responsive Design
+- Accesibility
+- Working with Designers
+- Design Implementation
+- Bootstrap
+- Advanced Javascript
+- Advanced JQuery
+- Cookies & Local Storage
+- ES6
+- TypeScript
+- Webpack
+- Building Portfolio Applications
 
 ## Technologies & Tools:computer:
 
