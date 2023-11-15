@@ -24,6 +24,8 @@ jobs:
           project_id: ticketing-dev-395902
             
       - name: Deploy via GCS
-        run: gcloud container clusters get-credentials ticketing-dev --zone=southamerica-east1-a
+        run: |
+          gsutil -m rm -rf gs://ticketing-dev-395902_cloudbuild/* || echo "$?"
+          gsutil -m cp -r * gs://ticketing-dev-395902_cloudbuild/
 
       - run: kubectl apply -f infra/k8s && kubectl apply -f infra/k8s-prod
