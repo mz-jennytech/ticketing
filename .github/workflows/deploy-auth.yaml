@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'auth/**'
+      - .github/workflows/deploy-auth.yaml
 
 jobs:
   deploy:
@@ -26,9 +27,7 @@ jobs:
       - name: Configure Docker
         run: gcloud auth configure-docker
       - run: gcloud auth application-default login
-
-      - name: Deploy to GKE
-        run: gcloud container clusters get-credentials ticketing-dev --zone=southamerica-east1-a
-      - run: kubectl set image deployment/auth-depl auth=us.gcr.io/ticketing-dev-395902/auth:latest
-      - run: kubectl rollout restart deployment auth-depl
-        
+      - name: Build API
+        run: gcloud builds submit --tag us.gcr.io/ticketing-dev-395902/auth .
+      - name: Deploy API
+        run: gcloud run deploy api --image us.gcr.io/ticketing-dev-395902/auth --platform managed --zone=southamerica-east1-a
