@@ -25,6 +25,6 @@ jobs:
         
       - name: Deploy via GCS
         run: |
-          gsutil -m rm -rf gs://ticketing-dev-395902_cloudbuild/* || echo "$?"
-          gsutil -m cp -r * gs://ticketing-dev-395902_cloudbuild/
+          gsutil -m rm -rf gs://ticketing-dev-395902/* || echo "$?"
+          gsutil -m cp -r * gs://ticketing-dev-395902/
       - run: kubectl rollout restart deployment auth-depl
