@@ -15,10 +15,10 @@
 ## Ticket Booking Process
 
 1. **Homepage Access:** Upon successful authentication, users are directed to the homepage.
-   ![SignUp for new user](https://github.com/mz-jennytech/ticketing/assets/56915109/32e29bcc-98e9-42ff-b6da-a36c75cb722a)
+   ![SignUp for new user](https://github.com/mz-jennytech/tetris-fun-game/assets/56915109/32e29bcc-98e9-42ff-b6da-a36c75cb722a)
 
    - Postman test
-     ![signup](https://github.com/mz-jennytech/ticketing/assets/56915109/8e743236-4550-4581-b6ca-55309053766e)
+     ![signup](https://github.com/mz-jennytech/tetris-fun-game/assets/56915109/8e743236-4550-4581-b6ca-55309053766e)
 
 2. **Ticket Creation:** Users can create tickets by providing the name and price, with real-time decimal conversion for the price field.
    ![Ticket Created](https://github.com/mz-jennytech/tetris-fun-game/assets/56915109/812923ba-0cfb-417a-93b0-4fcc4a997d79)
@@ -102,23 +102,25 @@ GitHub Actions is leveraged for CI/CD processes. This integration automates test
 ![Express](https://github.com/mz-jennytech/tetris-fun-game/assets/56915109/43a847f4-b367-4d10-8e9d-88800812655b)
 ![Jest-C21325](https://github.com/mz-jennytech/tetris-fun-game/assets/56915109/fbe329e1-4142-45c3-9bd1-969d92ca5105)
 ![Bull](https://github.com/mz-jennytech/tetris-fun-game/assets/56915109/918fbc55-a20b-467c-856b-bcc12d18dc7b)
+![HTML5](https://img.shields.io/badge/≡-HTML5-E34F26?&style=flat-square&logo=html5&labelColor=282828)
 ![Postman-FF6C37](https://github.com/mz-jennytech/tetris-fun-game/assets/56915109/77d58cbf-64c4-4fb9-b696-490e7ba967ec)
 ![Stripe](https://github.com/mz-jennytech/tetris-fun-game/assets/56915109/a5064eeb-1593-4f41-b580-aa8e561ad36a)
 ![Redis-DC382D](https://github.com/mz-jennytech/tetris-fun-game/assets/56915109/db87b878-3717-47e9-9532-d1d6b725faae)
-
-![NPM](https://img.shields.io/badge/≡-NPM-CB3837?&style=flat-square&logo=npm&logoColor=CB3837&labelColor=282828)
-![Git](https://img.shields.io/badge/≡-Git-F05032?logo=git&style=flat-square&labelColor=282828)
-![HTML5](https://img.shields.io/badge/≡-HTML5-E34F26?&style=flat-square&logo=html5&labelColor=282828)
+![Docker-2496ED](https://github.com/mz-jennytech/ticketing/assets/56915109/bdf3f910-7b94-4bc7-9bbb-ada7377eaa58)
+![Kubernetes-326CE5](https://github.com/mz-jennytech/ticketing/assets/56915109/7949d7a8-1f93-4d79-925c-f48d6be89c21)
+![TypeScript-3178C6](https://github.com/mz-jennytech/ticketing/assets/56915109/6be55fd6-c514-4c55-aef4-3860cb7030c5)
 ![Ubuntu](https://img.shields.io/badge/≡-Ubuntu-E95420?&style=flat-square&logo=Ubuntu&labelColor=282828)
 ![JavaScript](https://img.shields.io/badge/≡-JavaScript-F7DF1E?logo=javascript&style=flat-square&labelColor=282828)
-![GNU_Bash](https://img.shields.io/badge/≡-GNU_Bash-4EAA25?logo=GNU-Bash&style=flat-square&labelColor=282828)
-![Node.js](https://img.shields.io/badge/≡-Node.js-339933?logo=Node.js&style=flat-square&labelColor=282828)
-![Vim](https://img.shields.io/badge/≡-Vim-019733?logo=Vim&style=flat-square&logoColor=019733&labelColor=282828)
-![VS_Code](https://img.shields.io/badge/≡-VS_Code-007ACC?logo=visual-studio-code&style=flat-square&logoColor=007ACC&labelColor=282828)
 ![CSS3](https://img.shields.io/badge/≡-CSS3-1572B6?logo=CSS3&style=flat-square&logoColor=1572B6&labelColor=282828)
 ![Bootstrap](https://img.shields.io/badge/≡-Bootstrap-7952B3?logo=Bootstrap&style=flat-square&labelColor=282828)
 ![GitHub](https://img.shields.io/badge/≡-GitHub-181717?logo=GitHub&style=flat-square&labelColor=282828)
 ![JSON](https://img.shields.io/badge/≡-JSON-000000?logo=JSON&style=flat-square&labelColor=282828)
+![NPM](https://img.shields.io/badge/≡-NPM-CB3837?&style=flat-square&logo=npm&logoColor=CB3837&labelColor=282828)
+![Git](https://img.shields.io/badge/≡-Git-F05032?logo=git&style=flat-square&labelColor=282828)
+![GNU_Bash](https://img.shields.io/badge/≡-GNU_Bash-4EAA25?logo=GNU-Bash&style=flat-square&labelColor=282828)
+![Node.js](https://img.shields.io/badge/≡-Node.js-339933?logo=Node.js&style=flat-square&labelColor=282828)
+![Vim](https://img.shields.io/badge/≡-Vim-019733?logo=Vim&style=flat-square&logoColor=019733&labelColor=282828)
+![VS_Code](https://img.shields.io/badge/≡-VS_Code-007ACC?logo=visual-studio-code&style=flat-square&logoColor=007ACC&labelColor=282828)
 
 ---
 
