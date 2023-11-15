@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'infra/**'
+      - .github/workflows/deploy-manifests.yaml
 
 jobs:
   deploy:
@@ -22,10 +23,6 @@ jobs:
           project_id: ${{ secrets.GCP_PROJECT_ID }}
           service_account_key: ${{ secrets.GCP_SA_KEY }}
 
-      - name: Authenticate with Google Cloud
-        run: gcloud auth login
-
       - name: Deploy to GKE
         run: gcloud container clusters get-credentials ticketing-dev --zone=southamerica-east1-a
-      - run: kubectl apply -f infra/K8s
-      - run: kubectl apply -f infra/k8s-prod
+      - run: kubectl apply -f infra/k8s && kubectl apply -f infra/k8s-prod
