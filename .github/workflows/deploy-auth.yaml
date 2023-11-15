@@ -25,6 +25,7 @@ jobs:
 
       - name: Configure Docker
         run: gcloud auth configure-docker
+        
       - name: Authenticate Google Cloud SDK
         run: gcloud auth activate-service-account --key-file=${{ secrets.GCP_SA_KEY }}
 
