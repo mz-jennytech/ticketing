@@ -26,11 +26,6 @@ jobs:
       - name: Configure Docker
         run: gcloud auth configure-docker
         
-      - name: Authenticate Google Cloud SDK
-        run: |
-          echo "${{ secrets.GCP_SA_KEY }}" > /tmp/gcp-key.json
-          gcloud auth activate-service-account --key-file=/tmp/gcp-key.json
-          
       - name: Deploy to GKE
         run: |
           gcloud container clusters get-credentials ticketing-dev --zone=southamerica-east1-a
